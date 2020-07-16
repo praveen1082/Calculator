@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to my calculator</title>
+	<style>
+		body{
+			width:1300px;
+			height: 300px;
+		}
+		.hellobaby{
+			width: 25%;
+			height: 90%;
+			justify-content: center;
+			display: flex;
+			box-shadow: 0px 0px 8px 0.2px #d9d9d9;
+			margin: 0px;
+			padding: 0px;
+			margin-left: 350px;
+			margin-top: 10px;
+		}
+		table{
+			align-content: center;
+			margin-top: 20px;
+			height: 90%;
+			width: 90%;
+		}
+		table, tr, td {
+  			border: 0px solid black;
+  			border-collapse: collapse;
+		}input[type='text'],textarea{
+			background-color: white;
+			color: black;
+		}
+		input[type='text']{
+			border-radius: 12px;
+			border:0px solid gray;
+  			padding: 0 3px 0 10px;
+  			box-sizing: border-box;
+  			margin-bottom: 3px;
+  			width: 100%;
+  			height: 100%;
+  			font-size: 12px;
+  			font-style: italic;
+  			color: black;
+  			box-shadow: -2px -2px 8px 0.7px #d9d9d9;
+		}
+		input[type='button']{
+			height: 70%;
+			width:75%;
+			border-radius: 8px;
+			color: black;
+			padding: 2px;
+			background-color: white;
+			border: none;
+			outline: 0;
+			text-align: center;
+			font-size: 16px;
+		}
+		input[type='button']:hover{
+			height: 70%;
+			width:75%;
+			border-radius: 8px;
+			color: black;
+			padding: 2px;
+			background-color: white;
+			border: none;
+			outline: 0;
+			text-align: center;
+			font-size: 16px;
+			box-shadow: 0px 0px 4px 0.2px 	 #e6e6e6;
+		}
+		tr{
+			margin: 2px;
+			height:20%;
+		}
+		td{
+			width:20%;
+
+		}
+		#tryy{
+			height: 20%;
+			margin-right: 5px;
+		}
+</style>
+</head>
+<body>
+	<div class="hellobaby">
+	<!--<form method="post" action="#">-->
+		<table border="1px" width="20%">
+			<tr width="100%">
+				<td id = "tryy" width="100%" colspan="4"><input type="text" name="inputField" disabled="disabled" width="100%" height="100%" id="hell"></td>
+				<td><input type="button" value="C" onclick="ohmygod()"></td>
+			</tr>
+			<tr width="100%">
+				<td><input type="button" value="1" onclick="abcd(1)" class="ohoo"></td>
+				<td><input type="button" value="2" onclick="abcd(2)" class="ohoo"></td>
+				<td><input type="button" value="3" onclick="abcd(3)" class="ohoo"></td>
+				<td><input type="button" value="+" onclick="abcd('+')" class="ohoo"></td>
+				<td><input type="button" value="-" onclick="abcd('-')" class="ohoo"></td>
+			</tr>
+			<tr width="100%">
+				<td><input type="button" value="4" onclick="abcd(4)" class="ohoo"></td>
+				<td><input type="button" value="5" onclick="abcd(5)" class="ohoo"></td>
+				<td><input type="button" value="6" onclick="abcd(6)" class="ohoo"></td>
+				<td><input type="button" value="x" onclick="abcd('*')" class="ohoo"></td>
+				<td><input type="button" value="/" onclick="abcd('/')" class="ohoo"></td>
+			</tr>
+			<tr width="100%">
+				<td><input type="button" value="7" onclick="abcd(7)" class="ohoo"></td>
+				<td><input type="button" value="8" onclick="abcd(8)" class="ohoo"></td>
+				<td><input type="button" value="9" onclick="abcd(9)" class="ohoo"></td>
+				<td><input type="button" value="0" onclick="abcd(0)" class="ohoo"></td>
+				<td><input type="button" value="%" onclick="abcd('%')" class="ohoo"></td>
+			</tr>
+			<tr>
+				<td colspan="2"></td>
+				<td><input type="button" name="" value="Corr." onclick="corr()"></td>
+				<td><input type="button" name="" value="." onclick="abcd('.')" class="ohoo"></td>
+				<td><input type="button" name="" value="=" onclick="calc()"></td>
+			</tr>
+		</table>
+	</form>
+	</div>
+	<script>
+		var unknowntero = "";
+		function ohmygod(){
+			unknowntero = "";
+			document.getElementById("hell").value = "";
+		}
+		function abcd(item){
+			unknowntero += item;
+			document.getElementById("hell").value = unknowntero;
+		}	
+		function calc(){
+			document.getElementById("hell").value = eval(unknowntero.toString());
+		}
+		function corr(){
+			unknowntero = unknowntero.substring(0,unknowntero.length-1);
+			document.getElementById("hell").value = unknowntero;
+		}
+	</script>
+</body>
+</html>
